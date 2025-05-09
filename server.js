@@ -20,6 +20,7 @@ const allowedOrigins = [
   'https://eatyapp.netlify.app',
   'https://eatypartner.netlify.app',
   'https://eatyadmin.netlify.app',
+  'https://cybertestproject.netlify.app'
 ];
 
 app.use(cors({

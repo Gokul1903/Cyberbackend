@@ -1,11 +1,11 @@
-const express=require("express");
+const express = require("express");
 const router = express.Router();
-const {Owner_Signup}= require('../eatycontroller/authcontroller')
-const {Admin_signin}= require('../eatycontroller/admincontroller')
 
+const { addJob, viewJob } = require("../eatycontroller/creatingcontroller");
+const{Admin_signin}=require("../eatycontroller/admincontroller")
+const { AuthmiddlewareAdmin } = require("../authmiddleware/authmiddle");
 
-
-const {AuthmiddlewareAdmin}=require('../authmiddleware/authmiddle')
-router.post('/Owner_signup',AuthmiddlewareAdmin,Owner_Signup);
-router.post('/admin_login',Admin_signin);
+router.post("/addJob", addJob);
+router.get("/viewJob", viewJob);
+router.get("/signup", Admin_signin);
 module.exports = router;

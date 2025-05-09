@@ -14,7 +14,7 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'eaty-images', // Optional: Folder name in your Cloudinary dashboard
-    allowed_formats: ['jpg', 'png', 'jpeg','webp'],
+    allowed_formats: ['jpg', 'png', 'jpeg','webp','svg','ico'],
     public_id: (req, file) => Date.now() + '-' + file.originalname,
   },
 });
